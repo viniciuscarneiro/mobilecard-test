@@ -13,7 +13,7 @@ Os parâmetros necessários para compilar a aplicação ficam em um arquivo sepa
 
 
 ##Execução
-Para executar a aplicação, use o ant do eclipse importando o arquivo build.xml para a janela do ant e execute "install-undeploy-and-deploy".
+Para executar a aplicação, importe o projeto como maven project e use o ant do eclipse importando o arquivo build.xml para a janela do ant e execute "install-undeploy-and-deploy".
 
 Assim que o servidor for iniciado, o usuário deve digitar no browser a seguinte url: 'http://localhost:8080/application/client/'.
 
