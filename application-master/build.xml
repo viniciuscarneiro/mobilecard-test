@@ -1,0 +1,9 @@
+<project basedir="." default="install-undeploy-and-deploy" name="app">
+
+	<property file="build.properties" />
+
+	<import file="build-jboss.xml" />
+
+	<property name="module-dir" value="." />
+	
+</project>

@@ -1,0 +1,26 @@
+<project name="build-jboss">
+
+	<import file="build-pai.xml" />
+
+	<target name="install-undeploy-and-deploy" description="Copy .war to jboss" depends="undeploy,install">
+		<ant target="install" inheritall="true" inheritrefs="false"></ant>
+		<copy verbose="true" file="${module-dir}/target/${war.file.name}" todir="${jboss.home}/${jboss.config}" />
+	</target>
+
+	<target name="deploy" description="Copy .war to jboss" depends="undeploy">
+		<copy verbose="true" file="${module-dir}/target/${war.file.name}" todir="${jboss.home}/${jboss.config}" />
+	</target>
+
+	<target name="undeploy" description="Clean .war from jboss">
+		<delete file="${jboss.home}/${jboss.config}/${war.file.name}" />
+		<delete dir="${jboss.home}/${jboss.config}/${war.file.name}" />
+	</target>
+
+	<target name="jboss7.deploy.web.exploded.war" description="Copy web.war to jboss7" depends="undeploy,install">
+		<copy verbose="true" todir="${jboss.home}/${jboss.config}/${war.file.name}">
+			<fileset dir="${project.name}-web/target/${project.name}-web" />
+		</copy>
+		<copy verbose="true" file="./config/${project.name}-web.war.dodeploy" todir="${jboss.home}/${jboss.config}/" />
+	</target>
+
+</project>

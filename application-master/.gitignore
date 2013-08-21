@@ -1,0 +1,10 @@
+
+target/classes/br/com/mobilecard/application/service/ClientService.class
+
+target/maven-archiver/pom.properties
+
+*.prefs
+
+.DS_Store
+
+.classpath
