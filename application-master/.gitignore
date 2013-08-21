@@ -1,4 +1,3 @@
-
 target/classes/br/com/mobilecard/application/service/ClientService.class
 
 target/maven-archiver/pom.properties
@@ -8,3 +7,7 @@ target/maven-archiver/pom.properties
 .DS_Store
 
 .classpath
+
+.project
+
+.settings
